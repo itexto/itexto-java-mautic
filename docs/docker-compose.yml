@@ -1,0 +1,24 @@
+version: "3"
+services:
+        mautic:
+                image: mautic/mautic
+                depends_on:
+                        - mauticdb
+                environment:
+                        MAUTIC_DB_USER: mautic
+                        MAUTIC_DB_PASSWORD: mautic
+                        MAUTIC_DB_HOST: mauticdb
+                        MAUTIC_TRUSTED_PROXIES: 0.0.0.0/0
+                        MAUTIC_DB_PASSWORD: mautic
+                links:
+                        - mauticdb:mysql
+                ports:
+                        - 8080:80
+        mauticdb:
+                image: mysql:5.6
+                environment:
+                        MYSQL_DATABASE: mautic
+                        MYSQL_USER: mautic
+                        MYSQL_PASSWORD: mautic
+                        MYSQL_ROOT_PASSWORD: mautic
+        
