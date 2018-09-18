@@ -15,6 +15,7 @@ package br.com.itexto.mautic;
 import java.util.Base64;
 
 import br.com.itexto.mautic.endpoints.Contacts;
+import br.com.itexto.mautic.endpoints.Emails;
 
 public class MauticClient {
 	
@@ -25,6 +26,9 @@ public class MauticClient {
 	private final String password;
 	
 	private final String basicAuth;
+	
+	
+	
 	
 	/**
 	 * Create a new MauticClient
@@ -41,6 +45,10 @@ public class MauticClient {
 	
 	public Contacts contacts() {
 		return new Contacts(this);
+	}
+	
+	public Emails emails() {
+		return new Emails(this);
 	}
 	
 	
