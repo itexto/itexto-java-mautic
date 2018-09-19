@@ -123,7 +123,7 @@ public class Contacts extends BasicEndpoint {
 	}
 	
 	private String parseField(Map map, String field) {
-		return map != null && map.containsKey(field) ? map.get(field).toString() : null;
+		return map != null && map.containsKey(field) && map.get(field) != null ? map.get(field).toString() : null;
 	}
 	
 	private List<Contact> parseContacts(Map map) {
