@@ -14,7 +14,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.com.itexto</groupId>
   <artifactId>itexto-java-mautic</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <name>A Java REST Client for Mautic</name>
    <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
